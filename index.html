@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Fundamentos de Eletromagnetismo | Capacitores</title>
   <!-- Favicon do Capacitor -->
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cline x1='10' y1='4' x2='10' y2='28' stroke='%232563eb' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='22' y1='4' x2='22' y2='28' stroke='%232563eb' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='4' y1='16' x2='10' y2='16' stroke='%232563eb' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='22' y1='16' x2='28' y2='16' stroke='%232563eb' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" type="image/svg+xml">
+  <link rel="icon" href="image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32' fill='none'%3E%3Cline x1='10' y1='4' x2='10' y2='28' stroke='%232563eb' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='22' y1='4' x2='22' y2='28' stroke='%232563eb' stroke-width='3' stroke-linecap='round'/%3E%3Cline x1='4' y1='16' x2='10' y2='16' stroke='%232563eb' stroke-width='2' stroke-linecap='round'/%3E%3Cline x1='22' y1='16' x2='28' y2='16' stroke='%232563eb' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E" type="image/svg+xml">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>tailwind.config = { darkMode: 'class' }</script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -74,7 +74,7 @@
         <a href="#intro" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Introdução</a>
         <a href="#geometrias" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Geometria</a>
         <a href="#energia" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Energia</a>
-        <a href="#associacao" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Associação</a>
+        <a href="#associacao" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Circuitos</a>
         <a href="#dieletricos" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Dielétricos</a>
       </div>
       <div class="flex items-center gap-3">
@@ -95,7 +95,6 @@
       <span class="inline-block px-4 py-1.5 mb-6 text-xs font-bold tracking-widest text-blue-700 dark:text-blue-300 bg-blue-50 dark:bg-slate-800/60 backdrop-blur rounded-full uppercase shadow-sm">Produção de conteúdo</span>
       <h1 class="text-4xl md:text-7xl font-extrabold mb-4 tracking-tight text-slate-900 dark:text-white">Fundamentos de Eletromagnetismo</h1>
       <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-8 max-w-3xl mx-auto">Capacitores: Fundamentação Teórica</p>
-      
       
       <!-- Ícone de scroll discreto -->
       <div class="flex justify-center mb-16">
@@ -135,6 +134,9 @@
         </p>
         <p>
           A unidade de capacitância no Sistema Internacional é o <strong class="text-blue-600 dark:text-blue-400">Farad (F)</strong>, em homenagem a Michael Faraday, onde $1 \text{ F} = 1 \text{ C/V}$. Devido à grande magnitude de um Farad, é comum o uso de submúltiplos como microfarads ($\mu\text{F}$), nanofarads ($\text{nF}$) e picofarads ($\text{pF}$).
+        </p>
+        <p>
+          <strong class="text-blue-600 dark:text-blue-400">Para que serve?</strong> Na prática, os capacitores possuem diversas aplicações vitais. Eles são amplamente utilizados na <strong>filtragem de sinais</strong> (suavizando a tensão em fontes de alimentação), no <strong>armazenamento de energia</strong> (como em flashes de câmeras e bancos de capacitores industriais), no <strong>acoplamento e desacoplamento</strong> de sinais em amplificadores para separar componentes AC e DC, e em circuitos de <strong>temporização</strong> (timers).
         </p>
       </div>
     </div>
@@ -333,10 +335,10 @@
     </div>
   </section>
 
-  <!-- Associação -->
+  <!-- Funcionamento em Circuitos -->
   <section id="associacao" class="py-20 px-6">
     <div class="max-w-6xl mx-auto section-fade">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Associação de <span class="gradient-text">Capacitores</span></h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Funcionamento em <span class="gradient-text">Circuitos Elétricos</span></h2>
       <p class="text-center text-slate-600 dark:text-slate-300 mb-12 max-w-3xl mx-auto">
         Em circuitos reais, frequentemente conectamos múltiplos capacitores. O comportamento equivalente depende de como eles são ligados: se compartilham a mesma tensão (paralelo) ou a mesma carga (série).
       </p>
@@ -351,13 +353,13 @@
             <span class="px-3 py-1 text-xs font-semibold bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full">$Q$ constante</span>
           </div>
           <div class="prose dark:prose-invert max-w-none mb-4 text-sm text-slate-600 dark:text-slate-300">
-            <p>Na associação em série, os capacitores são ligados sequencialmente. A carga $Q$ acumulada em cada capacitor é a mesma, mas a tensão total é a soma das tensões individuais. A capacitância equivalente é sempre menor que a menor capacitância do circuito.</p>
+            <p>Em série, os capacitores compartilham a mesma carga, mas a tensão total se divide. A capacitância equivalente diminui, tornando o sistema menos capaz de armazenar carga do que o menor capacitor individualmente.</p>
           </div>
           <div class="math mb-5 bg-slate-50 dark:bg-slate-900/30 p-4 rounded-lg">$$ \frac{1}{C_{eq}} = \sum \frac{1}{C_i} $$</div>
           <div class="space-y-3">
-            <input type="number" id="serieC1" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none" placeholder="$C_1$ (F)" step="any">
-            <input type="number" id="serieC2" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none" placeholder="$C_2$ (F)" step="any">
-            <input type="number" id="serieC3" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none" placeholder="$C_3$ (F) [opcional]" step="any">
+            <input type="number" id="serieC1" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none" placeholder="C1 (F)" step="any">
+            <input type="number" id="serieC2" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none" placeholder="C2 (F)" step="any">
+            <input type="number" id="serieC3" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none" placeholder="C3 (F) [opcional]" step="any">
             <button id="calcSerieBtn" class="w-full py-2.5 bg-slate-800 dark:bg-slate-700 text-white rounded-lg hover:bg-slate-900 dark:hover:bg-slate-600 transition-colors font-medium shadow-md">Calcular $C_{eq}$</button>
             <div id="serieResult" class="text-center text-lg font-bold text-orange-600 dark:text-orange-400 hidden"></div>
           </div>
@@ -372,13 +374,13 @@
             <span class="px-3 py-1 text-xs font-semibold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">$V$ constante</span>
           </div>
           <div class="prose dark:prose-invert max-w-none mb-4 text-sm text-slate-600 dark:text-slate-300">
-            <p>Na associação em paralelo, todos os capacitores estão conectados diretamente à mesma diferença de potencial $V$. A carga total é a soma das cargas individuais. A capacitância equivalente é a soma direta, resultando em um valor maior.</p>
+            <p>Em paralelo, todos os capacitores estão submetidos à mesma tensão. A capacidade de armazenamento total aumenta, sendo a soma direta das capacitâncias individuais.</p>
           </div>
           <div class="math mb-5 bg-slate-50 dark:bg-slate-900/30 p-4 rounded-lg">$$ C_{eq} = \sum C_i $$</div>
           <div class="space-y-3">
-            <input type="number" id="paralC1" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="$C_1$ (F)" step="any">
-            <input type="number" id="paralC2" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="$C_2$ (F)" step="any">
-            <input type="number" id="paralC3" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="$C_3$ (F) [opcional]" step="any">
+            <input type="number" id="paralC1" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="C1 (F)" step="any">
+            <input type="number" id="paralC2" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="C2 (F)" step="any">
+            <input type="number" id="paralC3" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="C3 (F) [opcional]" step="any">
             <button id="calcParalBtn" class="w-full py-2.5 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors font-medium shadow-md shadow-blue-500/20">Calcular $C_{eq}$</button>
             <div id="paralResult" class="text-center text-lg font-bold text-blue-600 dark:text-blue-400 hidden"></div>
           </div>
