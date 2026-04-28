@@ -63,7 +63,7 @@
 </head>
 <body class="animated-bg text-slate-800 dark:text-slate-200 antialiased transition-colors duration-300">
 
-  <!-- Navbar -->
+ <!-- Navbar -->
   <nav class="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200/50 dark:border-slate-700/50">
     <div class="max-w-6xl mx-auto px-6 py-3 flex justify-between items-center">
       <a href="#" class="flex items-center gap-2 hover:opacity-80 transition-opacity">
@@ -72,9 +72,11 @@
       </a>
       <div class="hidden md:flex items-center space-x-8 text-sm font-semibold text-slate-600 dark:text-slate-300">
         <a href="#intro" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Introdução</a>
-        <a href="#geometrias" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Geometria</a>
+        <a href="#conceito" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Conceito</a>
+        <a href="#placas" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Placas Paralelas</a>
+        <a href="#geometrias" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Geometrias</a>
         <a href="#energia" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Energia</a>
-        <a href="#associacao" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Circuitos</a>
+        <a href="#circuits" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Circuitos</a>
         <a href="#dieletricos" class="hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Dielétricos</a>
       </div>
       <div class="flex items-center gap-3">
@@ -122,7 +124,7 @@
   </header>
 
   <!-- Introdução à Matéria -->
-  <section id="intro" class="py-16 px-6 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border-y border-slate-200/50 dark:border-slate-700/50">
+<section id="intro" class="pt-32 pb-16 px-6 bg-white/50 dark:bg-slate-800/50 backdrop-blur-sm border-y border-slate-200/50 dark:border-slate-700/50">
     <div class="max-w-4xl mx-auto section-fade">
       <h2 class="text-3xl font-bold mb-6 text-center">Introdução aos Capacitores</h2>
       <div class="space-y-4 text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
@@ -135,37 +137,95 @@
         <p>
           A unidade de capacitância no Sistema Internacional é o <strong class="text-blue-600 dark:text-blue-400">Farad (F)</strong>, em homenagem a Michael Faraday, onde $1 \text{ F} = 1 \text{ C/V}$. Devido à grande magnitude de um Farad, é comum o uso de submúltiplos como microfarads ($\mu\text{F}$), nanofarads ($\text{nF}$) e picofarads ($\text{pF}$).
         </p>
-        <p>
-          <strong class="text-blue-600 dark:text-blue-400">Para que serve?</strong> Na prática, os capacitores possuem diversas aplicações vitais. Eles são amplamente utilizados na <strong>filtragem de sinais</strong> (suavizando a tensão em fontes de alimentação), no <strong>armazenamento de energia</strong> (como em flashes de câmeras e bancos de capacitores industriais), no <strong>acoplamento e desacoplamento</strong> de sinais em amplificadores para separar componentes AC e DC, e em circuitos de <strong>temporização</strong> (timers).
-        </p>
+        
+        <details class="group bg-slate-100/50 dark:bg-slate-700/30 rounded-xl p-4 cursor-pointer transition-all">
+          <summary class="list-none flex items-center gap-2 font-bold text-blue-600 dark:text-blue-400 focus:outline-none">
+            <span class="text-xl group-open:rotate-45 transition-transform inline-block">+</span>
+            Para que serve?
+          </summary>
+          <div class="mt-4 text-base border-t border-slate-200 dark:border-slate-600 pt-4">
+            Na prática, os capacitores possuem diversas aplicações vitais. Eles são amplamente utilizados na <strong>filtragem de sinais</strong> (suavizando a tensão em fontes de alimentação), no <strong>armazenamento de energia</strong> (como em flashes de câmeras e bancos de capacitores industriais), no <strong>acoplamento e desacoplamento</strong> de sinais em amplificadores para separar componentes AC e DC, e em circuitos de <strong>temporização</strong> (timers).
+          </div>
+        </details>
+        
       </div>
     </div>
   </section>
 
-  <!-- Capacitância (Definição e Placas Paralelas) -->
-  <section id="capacitancia" class="py-20 px-6">
-    <div class="max-w-6xl mx-auto section-fade">
-      <div class="grid md:grid-cols-2 gap-12 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-6">Definição de <span class="gradient-text">Capacitância</span></h2>
-          <p class="text-slate-600 dark:text-slate-300 mb-6 leading-relaxed">
-            A capacitância ($C$) é a razão entre a magnitude da carga em uma das placas ($Q$) e a magnitude da diferença de potencial ($V$) entre elas. É uma medida puramente geométrica do arranjo dos condutores.
+  <!-- 2. Conceito Fundamental -->
+  <section id="conceito" class="py-20 px-6">
+      <div class="max-w-4xl mx-auto section-fade"> <div class="flex flex-col items-center text-center"> <h2 class="text-3xl md:text-4xl font-bold mb-6">2. Conceito <span class="gradient-text">Fundamental</span></h2>
+          
+          <p class="text-slate-600 dark:text-slate-300 mb-8 leading-relaxed max-w-2xl">
+            Imagine que você tem dois reservatórios de água conectados por uma membrana elástica. A capacitância seria a medida de quanta água (carga) você consegue bombear para um lado antes que a pressão (tensão) suba demais. No mundo elétrico, o capacitor é esse "reservatório": um dispositivo capaz de armazenar energia no campo elétrico.
           </p>
-          <div class="bg-white/60 dark:bg-slate-800/40 p-6 rounded-xl border border-slate-200 dark:border-slate-700 mb-6">
-            <p class="text-center text-lg mb-3 font-medium">Fórmula Fundamental:</p>
-            <div class="math text-center text-xl">$$C = \frac{Q}{V}$$</div>
+
+          <div class="bg-white/60 dark:bg-slate-800/40 p-8 rounded-xl border border-slate-200 dark:border-slate-700 mb-8 w-full">
+            <h3 class="text-xl font-bold mb-4 flex items-center justify-center gap-2">
+              <span class="w-2 h-2 bg-blue-500 rounded-full"></span> A Definição Matemática
+            </h3>
+            <p class="text-base mb-4">A capacitância ($C$) é definida pela razão entre a magnitude da carga acumulada ($Q$) em uma das placas e a diferença de potencial ($V$) entre elas</p>
+            
+            <div class="math text-3xl py-6">$$C = \frac{Q}{V}$$</div>
+            
+            <p class="text-sm text-slate-500 dark:text-slate-400 max-w-lg mx-auto">
+              Unidade: O Farad ($F$). Como $1F$ é uma unidade gigantesca para a eletrônica comum, usamos submúltiplos como microfarads ($\mu F$), nanofarads ($nF$) e picofarads ($pF$).
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 w-full text-left"> <div class="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800">
+              <h4 class="font-bold text-blue-700 dark:text-blue-300 mb-2">Geometria Pura</h4>
+              <p class="text-sm">A capacitância depende <strong>exclusivamente</strong> da forma geométrica dos condutores e do material entre eles, não da carga ou tensão em si.</p>
+            </div>
+            <div class="bg-teal-50 dark:bg-teal-900/20 p-5 rounded-xl border border-teal-200 dark:border-teal-800">
+              <h4 class="font-bold text-teal-700 dark:text-teal-300 mb-2">Exemplo Prático</h4>
+              <p class="text-sm">Se você aplica $12V$ a um capacitor e ele armazena $24\mu C$, sua capacitância é $2\mu F$. Se você dobrar a tensão para $24V$, a carga dobrará para $48\mu C$, mas a capacitância continuará sendo $2\mu F$.</p>
+            </div>
           </div>
           
-          <h3 class="text-xl font-bold mb-3 mt-8">Capacitor de Placas Paralelas</h3>
-          <p class="text-slate-600 dark:text-slate-300 mb-4 leading-relaxed">
-            O tipo mais simples de capacitor consiste em duas placas paralelas de área $A$, separadas por uma distância $d$. O campo elétrico $E$ entre as placas é uniforme (desprezando efeitos de borda) e dado por $E = \frac{\sigma}{\varepsilon_0} = \frac{Q}{\varepsilon_0 A}$.
-          </p>
-          <p class="text-slate-600 dark:text-slate-300 mb-4">
-            Como a diferença de potencial é $V = E \cdot d$, podemos derivar a fórmula para a capacitância:
-          </p>
+        </div>
+      </div>
+    </section>
+
+  <!-- 3. Capacitor de Placas Paralelas -->
+  <section id="placas" class="py-20 px-6 bg-gradient-to-b from-transparent to-blue-50/20 dark:to-blue-900/10">
+    <div class="max-w-6xl mx-auto section-fade">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4">3. Capacitor de <span class="gradient-text">Placas Paralelas</span></h2>
+        <p class="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
+          O modelo mais simples e didático consiste em duas placas condutoras paralelas de área $A$, separadas por uma distância $d$ muito menor que as dimensões das placas.
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <div class="space-y-4 mb-8">
+            <div class="flex gap-4 items-start">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 font-bold text-sm">1</span>
+              <div>
+                <h4 class="font-semibold text-slate-800 dark:text-white">Lei de Gauss</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Para uma placa infinita, o campo é $E = \sigma / 2\epsilon_0$. Entre duas placas opostas, os campos somam, resultando em $E = Q / (A\epsilon_0)$.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 font-bold text-sm">2</span>
+              <div>
+                <h4 class="font-semibold text-slate-800 dark:text-white">Diferença de Potencial</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Como o campo é uniforme, o potencial é o produto do campo pela distância: $V = E \cdot d = \frac{Qd}{A\epsilon_0}$.</p>
+              </div>
+            </div>
+            <div class="flex gap-4 items-start">
+              <span class="flex-shrink-0 w-8 h-8 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 font-bold text-sm">3</span>
+              <div>
+                <h4 class="font-semibold text-slate-800 dark:text-white">Finalização</h4>
+                <p class="text-sm text-slate-600 dark:text-slate-300">Substituindo na fórmula base $C = Q/V$:</p>
+                <div class="math text-center mt-2">$$C = \frac{\epsilon_0 A}{d}$$</div>
+              </div>
+            </div>
+          </div>
+          
           <div class="bg-blue-50 dark:bg-blue-900/20 p-5 rounded-xl border border-blue-200 dark:border-blue-800">
-            <div class="math text-center text-lg">$$C = \frac{\varepsilon_0 A}{d}$$</div>
-            <p class="text-sm text-slate-500 dark:text-slate-400 mt-3 text-center">$\varepsilon_0$: permissividade do vácuo ($8,85 \times 10^{-12} \text{ F/m}$)</p>
+            <p class="text-sm text-slate-600 dark:text-slate-300"><strong class="text-blue-700 dark:text-blue-300">Conclusão:</strong> Para aumentar a capacitância, você deve aumentar a área das placas ou diminuir a distância entre elas.</p>
           </div>
         </div>
         
@@ -198,13 +258,16 @@
     </div>
   </section>
 
-  <!-- Geometrias Avançadas -->
+   <!-- 4 & 5. Capacitores Cilíndricos e Esféricos -->
   <section id="geometrias" class="py-20 px-6 bg-gradient-to-b from-transparent to-teal-50/20 dark:to-teal-900/10">
     <div class="max-w-6xl mx-auto section-fade">
       <div class="text-center mb-12">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">Capacitores <span class="gradient-text">Cilíndricos e Esféricos</span></h2>
         <p class="text-slate-600 dark:text-slate-300 max-w-3xl mx-auto">
           Embora as placas paralelas sejam comuns, a capacitância depende apenas da geometria dos condutores. Cabos coaxiais e equipamentos de alta tensão utilizam geometrias curvas.
+        </p>
+        <p class="text-slate-500 dark:text-slate-400 mt-4 text-sm max-w-2xl mx-auto">
+          Para encontrar a capacitância dessas formas, o raciocínio físico segue um padrão dedutivo: usamos a <strong>Lei de Gauss</strong> para descobrir o Campo Elétrico ($E$) na região entre os condutores, integramos $E$ para achar a <strong>Diferença de Potencial</strong> ($V$) e, finalmente, usamos $C=Q/V$.
         </p>
       </div>
 
@@ -217,7 +280,7 @@
             </div>
             <h3 class="text-xl font-bold">Capacitor Cilíndrico</h3>
           </div>
-          <p class="text-slate-600 dark:text-slate-300 mb-4 text-sm">Dois cilindros coaxiais de raios $a$ e $b$ e comprimento $L$. O campo elétrico é radial e decai com $1/r$.</p>
+          <p class="text-slate-600 dark:text-slate-300 mb-4 text-sm">Dois cilindros coaxiais de raios $a$ e $b$ e comprimento $L$.</p>
           
           <div class="geo-visual w-full h-48 border border-slate-200 dark:border-slate-700 rounded-xl mb-4 p-4 flex items-center justify-center">
             <svg viewBox="0 0 300 160" width="100%" height="100%">
@@ -236,9 +299,25 @@
               <text x="-30" y="80" font-family="Inter" font-size="12" fill="#475569" text-anchor="middle">Comprimento L</text>
             </svg>
           </div>
-          <div class="math mb-4 bg-slate-50 dark:bg-slate-900/30 p-3 rounded-lg text-sm">$$ C = \frac{2\pi \varepsilon_0 L}{\ln(b/a)} $$</div>
+
+          <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300 mb-4 bg-slate-50 dark:bg-slate-900/30 p-4 rounded-lg">
+            <p><strong>1. Campo Elétrico:</strong> Pela Lei de Gauss, $E(2\pi r L) = Q/\epsilon_0 \Rightarrow E = \frac{Q}{2\pi \epsilon_0 L r}$.</p>
+            <p><strong>2. Potencial:</strong> Integramos o campo de $a$ até $b$: $V = \int_{a}^{b} E dr = \frac{Q}{2\pi \epsilon_0 L} \ln\left(\frac{b}{a}\right)$.</p>
+            <p><strong>3. Capacitância:</strong> $C = Q/V$.</p>
+          </div>
+          <div class="math text-center py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-700 mb-4">$$C = \frac{2\pi \epsilon_0 L}{\ln(b/a)}$$</div>
           
-          <div class="space-y-3">
+          <details class="group bg-teal-50 dark:bg-teal-900/10 rounded-lg overflow-hidden cursor-pointer">
+            <summary class="flex items-center justify-between p-3 text-sm font-medium text-teal-700 dark:text-teal-300 hover:bg-teal-100 dark:hover:bg-teal-900/20 transition-colors">
+              <span>🌍 Onde isso é usado? Clique para ver</span>
+              <span class="transform transition-transform group-open:rotate-180">+</span>
+            </summary>
+            <div class="p-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-teal-200 dark:border-teal-800">
+              Esta geometria é fundamental em <strong>cabos coaxiais</strong> (TV, internet) e <strong>cabos de alta tensão</strong>. O condutor central transmite a energia e a blindagem externa protege contra interferências. A capacitância por metro deve ser minimizada para evitar distorções de sinal.
+            </div>
+          </details>
+
+          <div class="mt-4 space-y-3">
             <div class="grid grid-cols-3 gap-2">
               <div><label class="text-[10px] font-medium text-slate-500 block mb-1">Raio Interno $a$ (mm)</label><input type="number" id="geoCyla" value="2.0" step="0.1" min="0.1" class="w-full px-2 py-1.5 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded text-xs"></div>
               <div><label class="text-[10px] font-medium text-slate-500 block mb-1">Raio Externo $b$ (mm)</label><input type="number" id="geoCylb" value="5.0" step="0.1" min="0.2" class="w-full px-2 py-1.5 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded text-xs"></div>
@@ -257,7 +336,7 @@
             </div>
             <h3 class="text-xl font-bold">Capacitor Esférico</h3>
           </div>
-          <p class="text-slate-600 dark:text-slate-300 mb-4 text-sm">Duas cascas esféricas concêntricas de raios $a$ e $b$. O campo varia com $1/r^2$ entre as cascas.</p>
+          <p class="text-slate-600 dark:text-slate-300 mb-4 text-sm">Duas cascas esféricas concêntricas de raios $a$ e $b$.</p>
           
           <div class="geo-visual w-full h-48 border border-slate-200 dark:border-slate-700 rounded-xl mb-4 p-4 flex items-center justify-center">
             <svg viewBox="0 0 200 200" width="100%" height="100%">
@@ -271,9 +350,25 @@
               <text x="120" y="95" font-family="Inter" font-size="12" fill="#e11d48">a</text>
             </svg>
           </div>
-          <div class="math mb-4 bg-slate-50 dark:bg-slate-900/30 p-3 rounded-lg text-sm">$$ C = 4\pi \varepsilon_0 \frac{ab}{b-a} $$</div>
+
+          <div class="space-y-4 text-sm text-slate-600 dark:text-slate-300 mb-4 bg-slate-50 dark:bg-slate-900/30 p-4 rounded-lg">
+            <p><strong>1. Campo Elétrico:</strong> Pela Lei de Gauss, $E = \frac{Q}{4\pi \epsilon_0 r^2}$.</p>
+            <p><strong>2. Potencial:</strong> Integramos o campo: $V = \int_{a}^{b} E dr = \frac{Q}{4\pi \epsilon_0} \left( \frac{1}{a} - \frac{1}{b} \right)$.</p>
+            <p><strong>3. Capacitância:</strong> Simplificando a fração do potencial, $C = Q/V$.</p>
+          </div>
+          <div class="math text-center py-3 px-4 rounded-lg border border-slate-200 dark:border-slate-700 mb-4">$$C = 4\pi \epsilon_0 \frac{ab}{b-a}$$</div>
           
-          <div class="space-y-3">
+          <details class="group bg-rose-50 dark:bg-rose-900/10 rounded-lg overflow-hidden cursor-pointer">
+            <summary class="flex items-center justify-between p-3 text-sm font-medium text-rose-700 dark:text-rose-300 hover:bg-rose-100 dark:hover:bg-rose-900/20 transition-colors">
+              <span>🌍 Onde isso é usado? Clique para ver</span>
+              <span class="transform transition-transform group-open:rotate-180">+</span>
+            </summary>
+            <div class="p-4 text-xs text-slate-600 dark:text-slate-300 leading-relaxed border-t border-rose-200 dark:border-rose-800">
+              Usado em equipamentos de <strong>alta tensão</strong> para isolar terminais e evitar descargas corona (perdas de energia para o ar). Também serve como modelo para a Terra, que atua como um capacitor gigante com a ionosfera.
+            </div>
+          </details>
+
+          <div class="mt-4 space-y-3">
             <div class="grid grid-cols-2 gap-2">
               <div><label class="text-[10px] font-medium text-slate-500 block mb-1">Raio Interno $a$ (mm)</label><input type="number" id="geoSphA" value="50.0" step="0.1" min="0.1" class="w-full px-2 py-1.5 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded text-xs"></div>
               <div><label class="text-[10px] font-medium text-slate-500 block mb-1">Raio Externo $b$ (mm)</label><input type="number" id="geoSphB" value="100.0" step="0.1" min="0.2" class="w-full px-2 py-1.5 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded text-xs"></div>
@@ -286,30 +381,25 @@
     </div>
   </section>
 
-  <!-- Energia -->
+  <!-- 6. Energia Armazenada -->
   <section id="energia" class="py-20 px-6 bg-gradient-to-b from-transparent to-blue-50/30 dark:to-blue-900/10">
     <div class="max-w-5xl mx-auto text-center section-fade">
-      <h2 class="text-3xl md:text-4xl font-bold mb-4">Energia <span class="gradient-text">Armazenada</span></h2>
-      <div class="prose dark:prose-invert max-w-3xl mx-auto mb-10">
-        <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
-          O carregamento de um capacitor exige trabalho. À medida que as cargas são transferidas de uma placa para outra, o potencial aumenta, exigindo mais trabalho para mover as cargas subsequentes. Esse trabalho é armazenado como <strong>energia potencial elétrica ($U$)</strong> no campo elétrico entre as placas.
-        </p>
-      </div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">6. Energia <span class="gradient-text">Armazenada</span></h2>
       
-      <div class="grid md:grid-cols-3 gap-6 mb-12">
-        <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-          <div class="math text-xl">$$U = \frac{1}{2}CV^2$$</div>
-          <p class="text-xs text-slate-500 mt-2">Mais comum (conhecendo C e V)</p>
+      <div class="grid md:grid-cols-2 gap-8 text-left items-start mb-12">
+        <div class="space-y-4">
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            O carregamento de um capacitor exige trabalho. À medida que as cargas são transferidas de uma placa para outra, o potencial aumenta, exigindo mais trabalho para mover as cargas subsequentes. Esse trabalho é armazenado como <strong>energia potencial elétrica ($U$)</strong> no campo elétrico entre as placas.
+          </p>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            O trabalho infinitesimal para mover uma carga $dq$ é $dW = V dq$. Como $V = q/C$ (carga variável instantânea), temos $dW = (q/C) dq$. Integrando de $0$ a $Q$:
+          </p>
+          <div class="math math-block text-xl text-center py-4 px-4 rounded-lg border border-slate-200 dark:border-slate-700">$$W = \int_{0}^{Q} \frac{q}{C} dq = \frac{Q^2}{2C}$$</div>
+          <p class="text-slate-600 dark:text-slate-300 leading-relaxed">
+            Usando $Q=CV$, chegamos à forma mais famosa: $U = \frac{1}{2}CV^2$.
+          </p>
         </div>
-        <div class="bg-blue-50/40 dark:bg-blue-900/20 backdrop-blur p-6 rounded-xl border border-blue-300 dark:border-blue-700 shadow-sm">
-          <div class="math text-xl">$$U = \frac{Q^2}{2C}$$</div>
-          <p class="text-xs text-slate-500 mt-2">Energia em função da carga</p>
-        </div>
-        <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur p-6 rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
-          <div class="math text-xl">$$U = \frac{1}{2}QV$$</div>
-          <p class="text-xs text-slate-500 mt-2">Média de potencial $\times$ carga</p>
-        </div>
-      </div>
+
       
       <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur p-8 rounded-2xl max-w-3xl mx-auto text-left border border-slate-200 dark:border-slate-700 shadow-sm">
         <h3 class="text-xl font-semibold mb-6 flex items-center gap-2">
@@ -336,11 +426,33 @@
   </section>
 
   <!-- Funcionamento em Circuitos -->
-  <section id="associacao" class="py-20 px-6">
+  <!-- 7. Capacitores em Circuitos -->
+  <section id="circuits" class="py-20 px-6">
     <div class="max-w-6xl mx-auto section-fade">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-4">Funcionamento em <span class="gradient-text">Circuitos Elétricos</span></h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8">7. Funcionamento em <span class="gradient-text">Circuitos Elétricos</span></h2>
+      
+      <div class="grid md:grid-cols-3 gap-8 mb-12">
+        <div class="col-span-3 max-w-4xl mx-auto">
+          <div class="bg-white/60 dark:bg-slate-900/40 p-6 rounded-xl border border-slate-200 dark:border-slate-700 text-center space-y-4">
+             <p class="text-lg text-slate-600 dark:text-slate-300">
+               Ao contrário dos resistores, que dissipam energia em forma de calor, os capacitores <strong>armazenam energia</strong> no campo elétrico. Em circuitos reais, isso implica em comportamentos dinâmicos:
+             </p>
+             <div class="grid md:grid-cols-2 gap-4 text-left mt-4">
+               <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg border border-orange-200 dark:border-orange-800">
+                 <h4 class="font-bold text-orange-700 dark:text-orange-300 mb-2">Corrente Contínua (DC)</h4>
+                 <p class="text-sm">O capacitor carrega até atingir a tensão da fonte. Uma vez carregado, ele bloqueia a passagem de corrente (circuito aberto). A corrente flui apenas durante o transiente de carga/descarga.</p>
+               </div>
+               <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800">
+                 <h4 class="font-bold text-blue-700 dark:text-blue-300 mb-2">Corrente Alternada (AC)</h4>
+                 <p class="text-sm">Como a tensão muda constantemente, o capacitor fica ciclicamente carregando e descarregando, permitindo a passagem de sinal. Ele atua como um resistor dependente da frequência (Reatância Capacitiva).</p>
+               </div>
+             </div>
+          </div>
+        </div>
+      </div>
+
       <p class="text-center text-slate-600 dark:text-slate-300 mb-12 max-w-3xl mx-auto">
-        Em circuitos elétricos, o capacitor apresenta um comportamento dinâmico e diferente de um resistor. Ele não dissipa energia ativamente, mas sim a armazena temporariamente no campo elétrico. Em circuitos reais, frequentemente conectamos múltiplos capacitores. O comportamento equivalente depende de como eles são ligados: se compartilham a mesma tensão (paralelo) ou a mesma carga (série).
+        Quando conectamos múltiplos capacitores, buscamos modificar a capacitância equivalente ou a tensão de trabalho do sistema.
       </p>
 
       <div class="grid md:grid-cols-2 gap-8">
@@ -348,14 +460,17 @@
         <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur p-7 rounded-2xl border border-slate-200 dark:border-slate-700 shadow-sm">
           <div class="flex items-center justify-between mb-5">
             <h3 class="text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-orange-500"></span> Em Série
+              <span class="w-3 h-3 rounded-full bg-orange-500"></span> Associação em Série
             </h3>
             <span class="px-3 py-1 text-xs font-semibold bg-orange-100 dark:bg-orange-900/30 text-orange-700 dark:text-orange-300 rounded-full">$Q$ constante</span>
           </div>
           <div class="prose dark:prose-invert max-w-none mb-4 text-sm text-slate-600 dark:text-slate-300">
-            <p>Em série, os capacitores compartilham a mesma carga, mas a tensão total se divide. A capacitância equivalente diminui, tornando o sistema menos capaz de armazenar carga do que o menor capacitor individualmente.</p>
+            <p><strong>Raciocínio:</strong> Em série, a carga $Q$ é a mesma em todos. A tensão total se divide: $V_{total} = V_1 + V_2$. Como $V=Q/C$, temos $Q/C_{eq} = Q/C_1 + Q/C_2$.</p>
           </div>
           <div class="math mb-5 bg-slate-50 dark:bg-slate-900/30 p-4 rounded-lg">$$ \frac{1}{C_{eq}} = \sum \frac{1}{C_i} $$</div>
+          <div class="bg-orange-50 dark:bg-orange-900/20 p-4 rounded-lg border border-orange-200 dark:border-orange-800 mb-4">
+            <p class="text-xs text-orange-800 dark:text-orange-200"><strong>Aplicação:</strong> Usada para suportar tensões maiores que um único capacitor aguentaria. A capacitância equivalente diminui.</p>
+          </div>
           <div class="space-y-3">
             <input type="number" id="serieC1" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none" placeholder="C1 (F)" step="any">
             <input type="number" id="serieC2" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-orange-500 outline-none" placeholder="C2 (F)" step="any">
@@ -369,14 +484,17 @@
         <div class="bg-white/70 dark:bg-slate-800/70 backdrop-blur p-7 rounded-2xl border border-blue-200 dark:border-blue-800 shadow-sm">
           <div class="flex items-center justify-between mb-5">
             <h3 class="text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
-              <span class="w-3 h-3 rounded-full bg-blue-500"></span> Em Paralelo
+              <span class="w-3 h-3 rounded-full bg-blue-500"></span> Associação em Paralelo
             </h3>
             <span class="px-3 py-1 text-xs font-semibold bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full">$V$ constante</span>
           </div>
           <div class="prose dark:prose-invert max-w-none mb-4 text-sm text-slate-600 dark:text-slate-300">
-            <p>Em paralelo, todos os capacitores estão submetidos à mesma tensão. A capacidade de armazenamento total aumenta, sendo a soma direta das capacitâncias individuais.</p>
+            <p><strong>Raciocínio:</strong> Todos têm a mesma tensão $V$. A carga total é a soma: $Q_{eq} = Q_1 + Q_2$. Como $Q=CV$, então $C_{eq}V = C_1V + C_2V$.</p>
           </div>
           <div class="math mb-5 bg-slate-50 dark:bg-slate-900/30 p-4 rounded-lg">$$ C_{eq} = \sum C_i $$</div>
+          <div class="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg border border-blue-200 dark:border-blue-800 mb-4">
+            <p class="text-xs text-blue-800 dark:text-blue-200"><strong>Aplicação:</strong> Usada para aumentar a capacidade de armazenamento. A capacitância equivalente é a soma direta.</p>
+          </div>
           <div class="space-y-3">
             <input type="number" id="paralC1" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="C1 (F)" step="any">
             <input type="number" id="paralC2" class="w-full px-4 py-2 bg-white/50 dark:bg-slate-800/50 border border-slate-300 dark:border-slate-600 rounded-lg focus:ring-2 focus:ring-blue-500 outline-none" placeholder="C2 (F)" step="any">
